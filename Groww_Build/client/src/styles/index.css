@@ -1,0 +1,92 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root, [data-theme="caramellatte"] {
+    color-scheme: light;
+    --color-base-100: #FFF7ED;
+    --color-base-200: #FEECD3;
+    --color-base-300: #FFD6A7;
+    --color-base-content: #7C2808;
+    --color-primary: #370A00;
+    --color-secondary: #8C3F27;
+    --color-accent: #C93400;
+    --color-neutral: #370A00;
+    --color-info: #193AB7;
+    --color-success: #006044;
+    --color-warning: #FCB700;
+    --color-error: #FF6266;
+  }
+
+  body {
+    background-color: #FFF7ED;
+    color: #370A00;
+    font-family: 'Roboto', 'Inter', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+    letter-spacing: -0.01em;
+    min-width: 320px;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+}
+
+/* Crisp Solid Caramellatte Bento Cards - Zero Gradients */
+.bento-card {
+  background-color: #FEECD3;
+  border: 1.5px solid #FFD6A7;
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 12px -2px rgba(55, 10, 0, 0.05);
+  transition: all 0.2s ease-in-out;
+}
+
+.bento-card:hover {
+  background-color: #FFF0DC;
+  border-color: #8C3F27;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -4px rgba(55, 10, 0, 0.08);
+}
+
+/* Solid Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #FFF7ED;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #FFD6A7;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #8C3F27;
+}
+
+/* Zero-Latency Stock Market Hardware Cursors (100% OS GPU-Accelerated, Zero Lag) */
+@media (hover: hover) and (pointer: fine) {
+  /* Default: Precision pointer with bullish green stock market candlestick */
+  html, body {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cline x1='22' y1='2' x2='22' y2='6' stroke='%23006044' stroke-width='1.5' stroke-linecap='round'/%3E%3Crect x='19.5' y='6' width='5' height='9' rx='1' fill='%23006044' stroke='%23FFF7ED' stroke-width='0.8'/%3E%3Cline x1='22' y1='15' x2='22' y2='19' stroke='%23006044' stroke-width='1.5' stroke-linecap='round'/%3E%3Cpath d='M23 2 L26 5' stroke='%23006044' stroke-width='1.2' stroke-linecap='round'/%3E%3Cpath d='M0 0 L0 18 L4.5 13.5 L8.5 22.5 L11.5 21 L7.5 12 L13.5 12 Z' fill='%23370A00' stroke='%23FFF7ED' stroke-width='1.5' stroke-linejoin='round'/%3E%3C/svg%3E") 0 0, auto;
+  }
+
+  /* Clickable / Interactive: Iconic Stock Market Bullish Candlestick */
+  a, button, [role="button"], input[type="button"], input[type="submit"], select, .cursor-pointer, .bento-card {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cline x1='16' y1='1' x2='16' y2='8' stroke='%23006044' stroke-width='2' stroke-linecap='round'/%3E%3Crect x='11' y='8' width='10' height='13' rx='1.5' fill='%23006044' stroke='%23FFF7ED' stroke-width='1.5'/%3E%3Cline x1='16' y1='21' x2='16' y2='28' stroke='%23006044' stroke-width='2' stroke-linecap='round'/%3E%3Cpath d='M23 7 L27 3 M27 3 L23 3 M27 3 L27 7' stroke='%238C3F27' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 16 1, pointer;
+  }
+
+  /* Market Chart Reticle: Precision Trading Crosshair */
+  .cursor-crosshair, canvas, [data-chart] {
+    cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Ccircle cx='16' cy='16' r='6' stroke='%238C3F27' stroke-width='1.5' fill='none'/%3E%3Ccircle cx='16' cy='16' r='2' fill='%23006044'/%3E%3Cline x1='16' y1='2' x2='16' y2='9' stroke='%23370A00' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='16' y1='23' x2='16' y2='30' stroke='%23370A00' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='2' y1='16' x2='9' y2='16' stroke='%23370A00' stroke-width='1.5' stroke-linecap='round'/%3E%3Cline x1='23' y1='16' x2='30' y2='16' stroke='%23370A00' stroke-width='1.5' stroke-linecap='round'/%3E%3C/svg%3E") 16 16, crosshair;
+  }
+
+  /* Standard Input Text Caret */
+  input[type="text"], input[type="email"], input[type="password"], textarea {
+    cursor: text;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "smart-market-watchlist",
+  "version": "1.0.0",
+  "description": "Smart Market Watchlist - Track, Detect, Explain, Prioritize",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "scripts": {
+    "dev": "node --no-warnings -e \"console.log('Use dev:server and dev:client or concurrent runners')\"",
+    "dev:server": "npm --prefix server run dev",
+    "dev:client": "npm --prefix client run dev",
+    "build:client": "npm --prefix client run build",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install",
+    "test:server": "npm --prefix server test"
+  },
+  "keywords": [
+    "watchlist",
+    "market",
+    "stocks",
+    "change-detection",
+    "mern"
+  ],
+  "author": "",
+  "license": "ISC"
+}
